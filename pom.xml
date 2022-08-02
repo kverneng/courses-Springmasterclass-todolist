@@ -19,8 +19,6 @@
         <compilerplugin-version>3.7.0</compilerplugin-version>
     </properties>
 
-    <dependencyManagement>
-
         <dependencies>
 
             <dependency>
@@ -48,8 +46,6 @@
             </dependency>
 
         </dependencies>
-
-    </dependencyManagement>
 
     <build>
         <plugins>
