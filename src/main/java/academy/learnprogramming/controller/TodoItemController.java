@@ -39,6 +39,14 @@ public class TodoItemController {
         return ViewNames.ITEMS_LIST;
     }
 
+    @GetMapping(Mappings.VIEW_ITEM)
+    public String viewItem(@RequestParam int id, Model model){
+        TodoItem todoItem = todoItemService.getItem(id);
+        model.addAttribute(AttributeNames.TODO_ITEM,todoItem);
+
+        return ViewNames.VIEW_ITEM;
+    }
+
     @GetMapping(Mappings.ADD_ITEM)
     public String addEditItem(@RequestParam(required = false,
             defaultValue = "-1") int id, Model model){
