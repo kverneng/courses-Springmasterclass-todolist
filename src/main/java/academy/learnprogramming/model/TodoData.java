@@ -62,8 +62,7 @@ public class TodoData {
     }
 
     public void updateItem(@NonNull TodoItem toUpdate){
-        ListIterator<TodoItem> itemListIterator =
-                (ListIterator<TodoItem>) items.iterator();
+        ListIterator<TodoItem> itemListIterator = items.listIterator();
 
         while (itemListIterator.hasNext()){
             TodoItem item = itemListIterator.next();
