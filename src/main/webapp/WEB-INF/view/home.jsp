@@ -1,26 +1,13 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page import="academy.learnprogramming.util.Mappings" %>
 <html>
 <head>
-    <title>Todo Items</title>
+    <title>Todo List Application</title>
 </head>
 <body>
     <div align="center">
-        <table border="1" cellpadding="5">
-
-            <caption><h2>Todo Items</h2></caption>
-
-            <tr>
-                <th>Title</th>
-                <th>Deadline</th>
-            </tr>
-
-            <c:forEach var="item" items="${todoData.items}">
-                <tr>
-                    <td><c:out value="${item.title}"/></td>
-                    <td><c:out value="${item.deadline}"/></td>
-                </tr>
-            </c:forEach>
-        </table>
+        <c:url var="itemsLink" value="${Mappings.ITEMS}"/>
+        <h2><a href="${itemsLink}">Show Todo Items</a></h2>
     </div>
 </body>
 </html>
